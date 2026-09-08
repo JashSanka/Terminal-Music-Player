@@ -72,4 +72,18 @@ async function playSong(index){
     isPaused=false;
     player.play();
 }
-})();
+function pause(){
+    if(player && !isPaused){
+        player.pause();
+        isPaused=true;
+    }
+}
+function resume(){
+    if(player && isPaused){
+        player.resume();
+        isPaused=false;
+    }
+}
+}
+
+)();
