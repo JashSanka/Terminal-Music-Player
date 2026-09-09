@@ -84,6 +84,16 @@ function resume(){
         isPaused=false;
     }
 }
+function quit(){
+    if(player){
+        player.stop();
+        player.dispose();
+        player=null;
+    }
+    process.stdin.setRawMode(false);
+    process.stdin.pause();
+    
+}
 }
 
 )();
